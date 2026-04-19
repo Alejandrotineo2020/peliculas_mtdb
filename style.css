@@ -1,0 +1,99 @@
+:root {
+    --bg-dark: #05070a;        /* Fondo casi negro azulado */
+    --bg-card: #0d1117;        /* Fondo de tarjetas */
+    --neon-cyan: #00d2ff;      /* Color principal */
+    --neon-purple: #9d50bb;    /* Acentos */
+    --text-main: #e6edf3;      /* Texto principal */
+    --text-dim: #8b949e;       /* Texto secundario */
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-image: radial-gradient(circle at top right, #1a1f2e 0%, #05070a 100%);
+    background-attachment: fixed;
+}
+
+/* Navbar estilo Vidrio (Glassmorphism) */
+.bg-dark-glass {
+    background: rgba(13, 17, 23, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 210, 255, 0.2);
+}
+
+.navbar-brand {
+    color: var(--neon-cyan) !important;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(0, 210, 255, 0.5);
+}
+
+/* Tarjetas Estilo Moderno */
+.movie-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.movie-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--neon-cyan);
+    box-shadow: 0 10px 30px rgba(0, 210, 255, 0.15);
+}
+
+.card-img-top {
+    border-radius: 12px 12px 0 0;
+    transition: opacity 0.3s;
+}
+
+.movie-card:hover .card-img-top {
+    opacity: 0.8;
+}
+
+/* Puntuación en Cian Neón */
+.rating-badge {
+    background: rgba(0, 210, 255, 0.1);
+    color: var(--neon-cyan);
+    padding: 4px 10px;
+    border-radius: 20px;
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border: 1px solid rgba(0, 210, 255, 0.3);
+}
+
+.card-title {
+    color: #fff;
+    font-weight: 600;
+}
+
+.overview-text {
+    color: var(--text-dim);
+    font-size: 0.85rem;
+}
+
+/* Paginación personalizada */
+.page-link {
+    background-color: var(--bg-card) !important;
+    color: var(--neon-cyan) !important;
+    border-color: rgba(0, 210, 255, 0.2) !important;
+}
+
+.page-link:hover {
+    background-color: var(--neon-cyan) !important;
+    color: #000 !important;
+}
+
+/* Caja de búsqueda */
+#searchInput {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 210, 255, 0.3);
+    border-radius: 20px;
+    padding-left: 15px;
+}
+
+#searchInput:focus {
+    box-shadow: 0 0 10px rgba(0, 210, 255, 0.4);
+    background: rgba(255, 255, 255, 0.1);
+}
